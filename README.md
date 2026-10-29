@@ -13,7 +13,7 @@ npm run export     # PDF backup (videos become poster frames)
 
 ## Layout
 
-- `slides.md`: the deck. Slides 1–24 are the talk; the 4 slides after Thank you are backups (not counted in the page numbers).
+- `slides.md`: the deck. Slides 1–24 are the talk; the 5 slides after Thank you are backups (not counted in the page numbers).
   Speaker notes carry the timings, the script, prepared answers (Thank-you slide) and questions to ask (Research interests slide).
 - `components/Vid.vue`: silent looping clip that restarts on slide enter and pauses on leave.
   Paths are relative to `public/` and get the build base prefixed, so they work locally and on Pages.
