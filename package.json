@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "slidev slides.md --open",
-    "build": "slidev build slides.md --base /gehrig-talk/",
+    "build": "slidev build slides.md --base /res-presentation-deck/",
     "export": "slidev export slides.md --output gehrig-talk.pdf",
     "lint": "tahta-lint slides.md"
   },

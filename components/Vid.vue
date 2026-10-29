@@ -6,7 +6,7 @@ import { onSlideEnter, onSlideLeave } from '@slidev/client'
 // left, so a video never runs on in the background of another slide.
 //   <Vid src="videos/coop.mp4" caption="Hardware, 2× speed" />
 // `src` is relative to public/ and is prefixed with the build base, so the same deck
-// works under `slidev dev` (/) and on GitHub Pages (/gehrig-talk/). The poster defaults to
+// works under `slidev dev` (/) and on GitHub Pages (/res-presentation-deck/). The poster defaults to
 // public/posters/<name>.jpg, which is also what the PDF export shows. If the clip is
 // missing, a dashed placeholder with `placeholder` text stands in until the file is added.
 const props = defineProps({

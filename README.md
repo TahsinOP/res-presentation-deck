@@ -7,7 +7,7 @@ Same stack and look as the e-Yantra workshop decks: `slidev-theme-tahta`, `minim
 npm install
 npm run dev        # http://localhost:3030 · presenter view at /presenter (speaker notes + timings)
 npm run lint       # tahta deck linter
-npm run build      # static site in dist/, base /gehrig-talk/
+npm run build      # static site in dist/, base /res-presentation-deck/
 npm run export     # PDF backup (videos become poster frames)
 ```
 
@@ -31,5 +31,5 @@ npm run export     # PDF backup (videos become poster frames)
 
 ## Deploy
 
-Push to a GitHub repository named `gehrig-talk`, set Settings → Pages → Source to **GitHub Actions**,
-and `.github/workflows/deploy.yml` publishes it at https://tahsinop.github.io/gehrig-talk/.
+Push to a GitHub repository named `res-presentation-deck`, set Settings → Pages → Source to **GitHub Actions**,
+and `.github/workflows/deploy.yml` publishes it at https://tahsinop.github.io/res-presentation-deck/.
