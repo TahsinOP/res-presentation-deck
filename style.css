@@ -1,0 +1,13 @@
+/* Breathing room between a slide's title and its content. */
+.l-head + .l-body { margin-top: var(--sp-6); }
+
+/* inline source tag after a list item */
+.cite { display: block; margin-top: 0.15rem; font: 500 0.66rem/1.2 var(--font-mono); color: var(--fg-dim); letter-spacing: 0.02em; }
+
+/* question cards (Questions my projects left me with) */
+.q { display: flex; flex-direction: column; padding: 0.9rem 1rem 1rem; background: var(--surface-bg); border: var(--surface-border); border-top: 3px solid var(--accent); border-radius: var(--radius); }
+.q-n { font: 600 0.72rem/1 var(--font-mono); letter-spacing: 0.08em; color: var(--accent); }
+.q-t { font-family: var(--font-display); font-weight: var(--w-display); font-size: 1.12rem; line-height: 1.25; margin: 0.45rem 0 0.4rem; min-height: 2.8rem; }
+.q-k { font: 600 0.62rem/1 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-dim); margin-top: 0.75rem; }
+.q-b { font-size: 0.78rem; line-height: 1.4; margin-top: 0.3rem; }
+.q-b strong { color: var(--accent); }
