@@ -21,13 +21,13 @@ subtitle: ERTS Lab (e-Yantra), IIT Bombay
 layout: default
 kicker: Background
 title: About me
-clicks: 4
+clicks: 5
 ---
 
 <AboutTimeline />
 
 <!--
-(0:25, one click per step) Mechanical engineering at NIT Karnataka with a minor in electronics. In my final year I wrote a review on soft autonomous mobile manipulators with Prof. Mervin Joe Thomas, published in Industrial Robot this year. Then the e-Yantra summer internship at IIT Bombay on visual SLAM, and since August 2025 I've been at the ERTS Lab: competition themes, remote labs, mentoring interns, and since February a research project in cooperative transport.
+(0:25, one click per step) Mechanical engineering at NIT Karnataka with a minor in electronics. My first step into robotics was the Robocon team, building mechanisms for DD Robocon 2023. In my final year I wrote a review on soft autonomous mobile manipulators with Prof. Mervin Joe Thomas, published in Industrial Robot this year. Then the e-Yantra summer internship at IIT Bombay on visual SLAM, and since August 2025 I've been at the ERTS Lab: competition themes, remote labs, mentoring interns, and since February a research project in cooperative transport.
 -->
 
 ---
@@ -40,7 +40,7 @@ title: What I have worked on
 
 <!--
 (0:35) The areas I've worked in, and the systems behind each.
-Perception on a Raspberry Pi camera car and on wrist cameras; SLAM handheld and on a quadrotor with a 3D LiDAR; estimation and control on two mobile manipulators and a field vehicle; navigation on a campus shuttle, that vehicle and a simulated quadruped; learning on SO-101 arms and a UR5; and at e-Yantra, a remote lab and a car kit for student teams. Some of these I built myself and some I mentored; I'll say which on each slide.
+Perception on a Raspberry Pi camera car and RGB-D wrist cameras; SLAM handheld and on a quadrotor with a 3D LiDAR; estimation and control on two mobile manipulators and an Ackermann field vehicle; navigation on a campus shuttle, that vehicle and a simulated quadruped; learning on SO-101 arms and a UR5; and at e-Yantra, a remote robot lab and a car kit for student teams. Some of these I built myself and some I mentored; I'll say which on each slide.
 Plan for today: two quick slides on my role at e-Yantra and earlier projects, then one thread, perception and SLAM, then learning, then cooperative transport where the two meet, and the questions they left me with.
 -->
 
@@ -85,41 +85,51 @@ kicker: Overview
 title: Earlier projects
 ---
 
-<div class="grid grid-cols-3 gap-6 items-start">
+<div class="grid grid-cols-4 gap-5 items-start text-[0.85em] mt-2">
 <div>
 
-<Vid src="videos/nitk.mp4" caption="Autonomous run (filmed by the CSD team) · 3×" height="11rem" fill />
+<Pic src="img/robocon.jpg" caption="In build; team at the nationals" height="9.5rem" />
+
+**DD Robocon** · NITK, 2023
+
+- Chassis and ring shooters for two robots
+- NITK's first national qualification
+
+</div>
+<div>
+
+<Vid src="videos/arms.mp4" caption="Vicon, driving, then Nav2 · 2×" height="9.5rem" fill />
+
+**Ackermann vehicle** · ARMS Lab, 2024
+
+- Motor control up to Nav2
+- IMU + Vicon Kalman filter
+
+</div>
+<div>
+
+<Vid src="videos/nitk.mp4" caption="Filmed by the CSD team · 3×" height="9.5rem" fill />
 
 **Campus shuttle** · NITK, 2025
 
-- Guided the software side: sensor suite, Autoware on ROS 2
-- LIO-SAM campus map, point-to-point runs
+- Guided the software, Autoware
+- LIO-SAM campus map
 
 </div>
 <div>
 
-<Vid src="videos/arms.mp4" caption="Vicon, driving, then Nav2 · 2×" height="11rem" fill />
+<Vid src="videos/quadruped.mp4" caption="MuJoCo and RViz · 2×" height="9.5rem" fill />
 
-**Ackermann field vehicle** · ARMS Lab, IIT Bombay, 2024
+**Quadruped** · personal, 2025
 
-- Built from motor control up to Nav2
-- IMU + Vicon Kalman filter, AMCL, pure pursuit
-
-</div>
-<div>
-
-<Vid src="videos/quadruped.mp4" caption="MuJoCo (left), RViz (right) · 2×" height="11rem" fill />
-
-**Quadruped in MuJoCo + ROS 2** · personal, 2025
-
-- PD control, leg IK, trot gait
-- Spline waypoints from RViz
+- MuJoCo + ROS 2, trot gait
+- Waypoints from RViz
 
 </div>
 </div>
 
 <!--
-(0:30) Three earlier projects, quickly. At NITK I guided the software side of an autonomous campus shuttle on an electric chassis: chose the sensors, set up Autoware on ROS 2, and LIO-SAM to map the campus; the hardware and the runs you see were done by the CSD team. At the ARMS Lab at IIT Bombay with Prof. Arpita Sinha, I built a four-wheel-drive Ackermann vehicle from motor control up to Nav2, with an IMU and Vicon Kalman filter for odometry. And a simulated Unitree B2 quadruped in MuJoCo bridged to ROS 2: leg IK, a trot gait and waypoint navigation.
+(0:35) Earlier projects, in order. My first step into robotics was DD Robocon 2023 with the NITK team: in the mechanical subsystem I designed the chassis and mechanisms for two robots, and we built catapult and dual-roller shooters to throw rings onto poles up to 12 m away; NITK's first national qualification, top 50 in the country. At the ARMS Lab at IIT Bombay with Prof. Arpita Sinha, I built a four-wheel-drive Ackermann vehicle from motor control up to Nav2, with an IMU and Vicon Kalman filter for odometry. At NITK I guided the software side of an autonomous campus shuttle on an electric chassis: chose the sensors, set up Autoware on ROS 2, and LIO-SAM to map the campus; the hardware and the runs you see were done by the CSD team. And a simulated Unitree B2 quadruped in MuJoCo bridged to ROS 2: leg IK, a trot gait and waypoint navigation.
 That's the breadth. Now one thread through the rest of the work: perception first.
 -->
 

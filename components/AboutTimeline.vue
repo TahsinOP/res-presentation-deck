@@ -3,13 +3,14 @@ import { computed } from 'vue'
 import { useSlideContext } from '@slidev/client'
 
 // Click-driven timeline for the About me slide: every step is visible but dimmed, and each
-// click lights the next one and fills the line up to it. Needs `clicks: 4` in the slide's
+// click lights the next one and fills the line up to it. Needs `clicks: 5` in the slide's
 // frontmatter (one click per step after the first). Print/export shows every step lit.
 //   <AboutTimeline />
 const EVENTS = [
-  { date: '2021–25', icon: 'lucide:graduation-cap', title: 'BTech Mechanical Eng.', where: 'NIT Karnataka', desc: 'Minor in Electronics and Communication' },
+  { date: '2021–25', icon: 'lucide:graduation-cap', title: 'BTech', where: 'NIT Karnataka', desc: 'Mechanical Eng., minor in Electronics and Communication' },
+  { date: '2022–23', icon: 'lucide:wrench', title: 'DD Robocon', where: 'CSD Robocon, NITK', desc: 'Mechanisms for two robots; national qualifier' },
   { date: '2024–25', icon: 'lucide:book-open', title: 'Review paper', where: 'During BTech', desc: 'Soft mobile manipulators, Industrial Robot 2026, first author' },
-  { date: 'May 2025', icon: 'lucide:map', title: 'eYSIP research intern', where: 'IIT Bombay', desc: 'Visual SLAM for a UAV' },
+  { date: 'May 2025', icon: 'lucide:map', title: 'eYSIP intern', where: 'IIT Bombay', desc: 'Visual SLAM for a UAV' },
   { date: 'Aug 2025 →', icon: 'lucide:users', title: 'ERTS Lab', where: 'e-Yantra, IIT Bombay', desc: 'Senior Project Technical Assistant' },
   { date: 'Feb 2026 →', icon: 'lucide:bot', title: 'Cooperative transport', where: 'IIT Bombay', desc: 'Research project' },
 ]
