@@ -18,7 +18,7 @@ npm run export     # PDF backup (videos become poster frames)
 - `components/Vid.vue`: silent looping clip that restarts on slide enter and pauses on leave.
   Paths are relative to `public/` and get the build base prefixed, so they work locally and on Pages.
 - `components/EstimatorTick.vue`: animated 30 Hz detections → 50 Hz filter ticks with the χ² gate and covariance floor (scalar sketch, schematic).
-- `components/WorkMap.vue`: animated mind map of work areas and the systems behind each (overview slide).
+- `components/WorkAreas.vue`: six area tiles for the overview slide.
 - `components/AboutTimeline.vue`: photo timeline for the About me slide.
 - `components/Pic.vue`: still image framed like `Vid`, for photo/clip rows.
 - `components/Fit.vue`, `vite.config.ts`: Fit override copied from workshop-ai (fixes clipping in PDF export).

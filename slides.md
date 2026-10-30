@@ -36,47 +36,11 @@ kicker: Overview
 title: What I have worked on
 ---
 
-<WorkMap />
+<WorkAreas />
 
 <!--
-(0:35) The areas I've worked in, and the systems behind each.
-Perception on a Raspberry Pi camera car and RGB-D wrist cameras; SLAM handheld and on a quadrotor with a 3D LiDAR; estimation and control on two mobile manipulators and an Ackermann field vehicle; navigation on a campus shuttle, that vehicle and a simulated quadruped; learning on SO-101 arms and a UR5; and at e-Yantra, a remote robot lab and a car kit for student teams. Some of these I built myself and some I mentored; I'll say which on each slide.
-Plan for today: two quick slides on my role at e-Yantra and earlier projects, then one thread, perception and SLAM, then learning, then cooperative transport where the two meet, and the questions they left me with.
--->
-
----
-layout: default
-kicker: e-Yantra Robotics Competition 2025–26 · paper in preparation
-title: Remote labs for robotics
----
-
-<div class="grid grid-cols-[0.9fr_1.4fr] gap-6 items-start">
-<div>
-
-- Krishi CoBot theme: a UR5 and a mobile robot in a mock greenhouse
-- Teams develop in simulation, then run on the real robots over the internet
-- Paper in preparation on scalable, low-cost remote labs
-
-</div>
-<div>
-
-<div class="grid grid-cols-[1.6fr_1fr] gap-3 items-start">
-<Pic src="img/remote-labs.png" height="9.5rem" fit="contain" />
-<Vid src="videos/krishi.mp4" caption="Krishi CoBot arena" height="9.5rem" fill />
-</div>
-
-</div>
-</div>
-
-<div class="grid grid-cols-3 gap-4 mt-4">
-  <StatCard value="649" label="teams" />
-  <StatCard value="2436" label="participants" />
-  <StatCard value="475" unit="h" label="of remote hardware access" />
-</div>
-
-<!--
-(0:35) My main role at the ERTS Lab: building national competitions and the remote labs behind them. The problem: most students learning robotics never run code on a real robot. For the Krishi CoBot theme I developed, a UR5 and a mobile robot work in a mock greenhouse; teams build in simulation, then book time on the real setup over the internet. 649 teams, 2436 participants, 475 hours of remote hardware access. We're writing a paper on making such labs scalable and low-cost.
-Only if time: I also mentor eYSIP interns, ran faculty development programmes on embedded systems for about 80 professors, and a ROS workshop for the Women in Robotics initiative.
+(0:20) The areas of robotics I've worked in: perception; SLAM, in 2D, with 3D LiDAR and visual; navigation; control; imitation learning; and robotics for education at e-Yantra.
+Plan: earlier projects and two papers quickly, then perception and SLAM, then learning, then cooperative transport where these meet, and the questions they left me with.
 -->
 
 ---
@@ -130,7 +94,51 @@ title: Earlier projects
 
 <!--
 (0:35) Earlier projects, in order. My first step into robotics was DD Robocon 2023 with the NITK team: in the mechanical subsystem I designed the chassis and mechanisms for two robots, and we built catapult and dual-roller shooters to throw rings onto poles up to 12 m away; NITK's first national qualification, top 50 in the country. At the ARMS Lab at IIT Bombay with Prof. Arpita Sinha, I built a four-wheel-drive Ackermann vehicle from motor control up to Nav2, with an IMU and Vicon Kalman filter for odometry. At NITK I guided the software side of an autonomous campus shuttle on an electric chassis: chose the sensors, set up Autoware on ROS 2, and LIO-SAM to map the campus; the hardware and the runs you see were done by the CSD team. And a simulated Unitree B2 quadruped in MuJoCo bridged to ROS 2: leg IK, a trot gait and waypoint navigation.
+Then two papers.
+-->
+
+---
+layout: default
+kicker: Papers
+title: Publication and paper in preparation
+---
+
+<div class="grid grid-cols-2 gap-10 items-start">
+<div>
+
+**Review** · *Industrial Robot*, 2026 · first author
+
+- Soft autonomous mobile manipulators in agriculture
+- Integrating gripper, arm and base is the open problem
+
+<Pic src="img/samm-field-robots.jpg" caption="Agricultural mobile manipulators covered in the review" height="13rem" fit="contain" />
+
+</div>
+<div>
+
+**Remote labs for robotics** · in preparation
+
+- Krishi CoBot, eYRC 2025–26: teams develop in simulation, then run a UR5 and a mobile robot over the internet
+
+<div class="grid grid-cols-[1.4fr_1fr] gap-3">
+<Pic src="img/remote-labs.png" height="7.5rem" fit="contain" />
+<Vid src="videos/krishi.mp4" height="7.5rem" fill />
+</div>
+
+<div class="mini-stats">
+  <div><b>649</b><span>teams</span></div>
+  <div><b>2436</b><span>participants</span></div>
+  <div><b>475 h</b><span>remote hardware access</span></div>
+</div>
+
+</div>
+</div>
+
+<!--
+(0:45) Two papers. The review, published in Industrial Robot this year with Prof. Mervin Joe Thomas at NITK, covers soft autonomous mobile manipulators for agriculture: soft grippers, mobile bases in unstructured fields and the integrated system. The finding: each part has matured, but integrating them is the open problem.
+The second is from my main role at the ERTS Lab, building national competitions and the remote labs behind them. Most students learning robotics never run code on a real robot. For the Krishi CoBot theme I developed, a UR5 and a mobile robot work in a mock greenhouse; teams build in simulation, then book time on the real setup over the internet. 649 teams, 2436 participants, 475 hours of remote hardware access. We're writing a paper on making such labs scalable and low-cost.
 That's the breadth. Now one thread through the rest of the work: perception first.
+Only if time: I also mentor eYSIP interns, ran faculty development programmes on embedded systems for about 80 professors, and a ROS workshop for the Women in Robotics initiative.
 -->
 
 ---
@@ -661,49 +669,6 @@ $$
 
 <!--
 This is where κ comes from: the coupling should be at half strength by 5 degrees of orientation uncertainty. The tolerance is an engineering estimate, not a measurement.
--->
-
----
-layout: default
-kicker: Research outputs
-title: Publication and paper in preparation
-aside: backup
----
-
-<div class="grid grid-cols-2 gap-10 items-start">
-<div>
-
-**Review · *Industrial Robot*, 2026** · first author
-
-- Soft autonomous mobile manipulators in agriculture, with Prof. Mervin Joe Thomas (NITK)
-- Soft grippers, mobile bases and the integrated system; integration is the open problem
-
-<Pic src="img/samm-field-robots.jpg" caption="Agricultural mobile manipulators covered in the review" height="9rem" fit="contain" />
-
-</div>
-<div>
-
-**Remote labs for robotics** · paper in preparation
-
-- Krishi CoBot (eYRC 2025–26): a UR5 and a mobile robot, run remotely from simulation code
-- 649 teams, 2436 participants, 475 h of remote hardware access
-
-<div class="grid grid-cols-[1.4fr_1fr] gap-3">
-<Pic src="img/remote-labs.png" height="9rem" fit="contain" />
-<Vid src="videos/krishi.mp4" height="9rem" fill />
-</div>
-
-</div>
-</div>
-
-<!--
-(0:50) Two research outputs beyond the transport work.
-
-The review, published in Industrial Robot this year with Prof. Mervin Joe Thomas at NITK: soft autonomous mobile manipulators for harvesting and crop monitoring. It covers soft grippers across actuator families, localisation and planning for mobile bases in unstructured fields, and the integrated system. The main finding is that each part has matured, but integrating them is the open problem; the design-space analysis shows where gripper compliance relaxes the precision needed from the base and arm.
-
-Remote labs: for the Krishi CoBot theme I developed, a UR5 and a mobile robot work in a mock greenhouse; teams build in simulation, then run on the real setup over the internet. 649 teams, 2436 participants, 475 hours of remote hardware access. We're writing a paper on making such labs scalable and low-cost.
-
-Only if time. Also at e-Yantra: mentored eYSIP projects, faculty development programmes on embedded systems for about 80 professors, and a ROS workshop for the Women in Robotics initiative.
 -->
 
 ---

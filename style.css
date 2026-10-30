@@ -11,3 +11,9 @@
 .q-k { font: 600 0.62rem/1 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-dim); margin-top: 0.75rem; }
 .q-b { font-size: 0.78rem; line-height: 1.4; margin-top: 0.3rem; }
 .q-b strong { color: var(--accent); }
+
+/* compact numbers row (papers slide) */
+.mini-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-top: 0.8rem; }
+.mini-stats div { border-top: 3px solid var(--accent); padding-top: 0.35rem; }
+.mini-stats b { display: block; font-family: var(--font-display); font-weight: var(--w-display); font-size: 1.6rem; line-height: 1.1; }
+.mini-stats span { font-size: 0.72rem; color: var(--fg-dim); }
