@@ -14,20 +14,20 @@ subtitle: ERTS Lab (e-Yantra), IIT Bombay
 ---
 
 <!--
-(0:20) Thank you for the time. I'll give a quick overview of what I've worked on, then a few projects grouped by area, then the one I'm most invested in, cooperative transport with two robots using only onboard sensing, and end with the questions these projects left me with. About thirteen minutes; please stop me anywhere.
+(0:20) Thank you for the time. I'll give a quick overview of what I've worked on, then a few projects grouped by area, then the one I'm most invested in, cooperative transport with two robots using only onboard sensing, and end with what hardware taught me and where I'd like to go. About thirteen minutes; please stop me anywhere.
 -->
 
 ---
 layout: default
 kicker: Background
 title: About me
-clicks: 5
+clicks: 4
 ---
 
 <AboutTimeline />
 
 <!--
-(0:25, one click per step) Mechanical engineering at NIT Karnataka with a minor in electronics. My first step into robotics was the Robocon team, building mechanisms for DD Robocon 2023. In my final year I wrote a review on soft autonomous mobile manipulators with Prof. Mervin Joe Thomas, published in Industrial Robot this year. Then the e-Yantra summer internship at IIT Bombay on visual SLAM, and since August 2025 I've been at the ERTS Lab: competition themes, remote labs, mentoring interns, and since February a research project in cooperative transport.
+(0:25, one click per step) Mechanical engineering at NIT Karnataka with a minor in electronics. My first step into robotics was the Robocon team, building mechanisms for DD Robocon 2023. In my final year I wrote a review on soft autonomous mobile manipulators with Prof. Mervin Joe Thomas, published in Industrial Robot this year. Since August 2025 I've been at the ERTS Lab: competition themes, remote labs, mentoring interns, and since February a research project in cooperative transport.
 -->
 
 ---
@@ -39,8 +39,8 @@ title: What I have worked on
 <WorkAreas />
 
 <!--
-(0:20) The areas of robotics I've worked in: perception; SLAM, in 2D, with 3D LiDAR and visual; navigation; control; imitation learning; and robotics for education at e-Yantra.
-Plan: earlier projects and two papers quickly, then perception and SLAM, then learning, then cooperative transport where these meet, and the questions they left me with.
+(0:20) The areas of robotics I've worked in: perception; SLAM, in 2D, with 3D LiDAR and visual; navigation and control on mobile robots and vehicles; manipulation with arms and two mobile manipulators; imitation learning on SO-101 and UR5 arms; and robotics for education at e-Yantra.
+Plan: earlier projects and two papers quickly, then perception and SLAM, then learning, then cooperative transport where these meet, and what that work taught me.
 -->
 
 ---
@@ -52,91 +52,82 @@ title: Earlier projects
 <div class="grid grid-cols-4 gap-5 items-start text-[0.85em] mt-2">
 <div>
 
-<Pic src="img/robocon.jpg" caption="In build; team at the nationals" height="9.5rem" />
+<Pic src="img/robocon.jpg" caption="In build; team at the nationals" height="11.5rem" />
 
 **DD Robocon** · NITK, 2023
 
-- Chassis and ring shooters for two robots
-- NITK's first national qualification
+- Ring-shooting robots; national qualifier
 
 </div>
 <div>
 
-<Vid src="videos/arms.mp4" caption="Vicon, driving, then Nav2 · 2×" height="9.5rem" fill />
+<Vid src="videos/arms.mp4" caption="Vicon, driving, then Nav2 · 2×" height="11.5rem" fill />
 
-**Ackermann vehicle** · ARMS Lab, 2024
+**Ackermann vehicle** · IITB, 2024
 
-- Motor control up to Nav2
-- IMU + Vicon Kalman filter
+- Autonomous RC car: state estimation, 2D SLAM
 
 </div>
 <div>
 
-<Vid src="videos/nitk.mp4" caption="Filmed by the CSD team · 3×" height="9.5rem" fill />
+<Vid src="videos/nitk.mp4" caption="Filmed by the CSD team" height="11.5rem" fill />
 
 **Campus shuttle** · NITK, 2025
 
-- Guided the software, Autoware
-- LIO-SAM campus map
+- Guided the software: Autoware, LIO-SAM
 
 </div>
 <div>
 
-<Vid src="videos/quadruped.mp4" caption="MuJoCo and RViz · 2×" height="9.5rem" fill />
+<Vid src="videos/quadruped.mp4" caption="MuJoCo and RViz · 2×" height="11.5rem" fill />
 
 **Quadruped** · personal, 2025
 
-- MuJoCo + ROS 2, trot gait
-- Waypoints from RViz
+- Trot gait and waypoint walking
 
 </div>
 </div>
 
 <!--
-(0:35) Earlier projects, in order. My first step into robotics was DD Robocon 2023 with the NITK team: in the mechanical subsystem I designed the chassis and mechanisms for two robots, and we built catapult and dual-roller shooters to throw rings onto poles up to 12 m away; NITK's first national qualification, top 50 in the country. At the ARMS Lab at IIT Bombay with Prof. Arpita Sinha, I built a four-wheel-drive Ackermann vehicle from motor control up to Nav2, with an IMU and Vicon Kalman filter for odometry. At NITK I guided the software side of an autonomous campus shuttle on an electric chassis: chose the sensors, set up Autoware on ROS 2, and LIO-SAM to map the campus; the hardware and the runs you see were done by the CSD team. And a simulated Unitree B2 quadruped in MuJoCo bridged to ROS 2: leg IK, a trot gait and waypoint navigation.
+(0:35) Earlier projects, in order. My first step into robotics was DD Robocon 2023 with the NITK team: in the mechanical subsystem I designed the chassis and mechanisms for two robots, and we built catapult and dual-roller shooters to throw rings onto poles up to 12 m away; NITK's first national qualification, top 50 in the country. At the ARMS Lab at IIT Bombay with Prof. Arpita Sinha, I made a stock RC car autonomous on ROS 2: state estimation with an IMU and Vicon Kalman filter, 2D LiDAR SLAM, then AMCL and Nav2 with pure pursuit. At NITK I guided the software side of an autonomous campus shuttle on an electric chassis: chose the sensors, set up Autoware on ROS 2, and LIO-SAM to map the campus; the hardware and the runs you see were done by the CSD team: the first autonomous steering test, a point-to-point run, and a run with a pedestrian walking into the path. And a simulated Unitree B2 quadruped in MuJoCo bridged to ROS 2: leg IK, a trot gait and waypoint navigation.
 Then two papers.
 -->
 
 ---
 layout: default
-kicker: Papers
-title: Publication and paper in preparation
+kicker: Overview
+title: Publications
 ---
 
-<div class="grid grid-cols-2 gap-10 items-start">
-<div>
+<div class="grid grid-cols-2 gap-6 items-stretch mt-1">
 
-**Review** · *Industrial Robot*, 2026 · first author
-
-- Soft autonomous mobile manipulators in agriculture
-- Integrating gripper, arm and base is the open problem
-
-<Pic src="img/samm-field-robots.jpg" caption="Agricultural mobile manipulators covered in the review" height="13rem" fit="contain" />
-
+<div class="pub">
+<div class="pub-tag">Published · <em>Industrial Robot</em>, 2026</div>
+<div class="pub-title">Soft autonomous mobile manipulators in agricultural automation: a review</div>
+<div class="pub-desc">How soft grippers, arms and mobile bases come together for handling crops, and why integrating them is still the open problem.</div>
+<Pic src="img/samm-field-robots.jpg" height="9.2rem" fit="contain" />
 </div>
-<div>
 
-**Remote labs for robotics** · in preparation
-
-- Krishi CoBot, eYRC 2025–26: teams develop in simulation, then run a UR5 and a mobile robot over the internet
-
+<div class="pub">
+<div class="pub-tag">In preparation · eYRC 2025–26</div>
+<div class="pub-title">Remote labs for robotics at national scale</div>
+<div class="pub-desc">Krishi CoBot: teams develop in simulation, then run a UR5 and a mobile robot over the internet.</div>
 <div class="grid grid-cols-[1.4fr_1fr] gap-3">
-<Pic src="img/remote-labs.png" height="7.5rem" fit="contain" />
-<Vid src="videos/krishi.mp4" height="7.5rem" fill />
+<Pic src="img/remote-labs.png" height="5.2rem" fit="contain" />
+<Vid src="videos/krishi.mp4" height="5.2rem" fill />
+</div>
+<div class="grid grid-cols-3 gap-3 mt-3">
+  <StatCard value="649" label="teams" size="sm" />
+  <StatCard value="2436" label="participants" size="sm" />
+  <StatCard value="475" unit="h" label="on real robots" size="sm" />
+</div>
 </div>
 
-<div class="mini-stats">
-  <div><b>649</b><span>teams</span></div>
-  <div><b>2436</b><span>participants</span></div>
-  <div><b>475 h</b><span>remote hardware access</span></div>
-</div>
-
-</div>
 </div>
 
 <!--
 (0:45) Two papers. The review, published in Industrial Robot this year with Prof. Mervin Joe Thomas at NITK, covers soft autonomous mobile manipulators for agriculture: soft grippers, mobile bases in unstructured fields and the integrated system. The finding: each part has matured, but integrating them is the open problem.
-The second is from my main role at the ERTS Lab, building national competitions and the remote labs behind them. Most students learning robotics never run code on a real robot. For the Krishi CoBot theme I developed, a UR5 and a mobile robot work in a mock greenhouse; teams build in simulation, then book time on the real setup over the internet. 649 teams, 2436 participants, 475 hours of remote hardware access. We're writing a paper on making such labs scalable and low-cost.
+The second, in preparation, comes from my main role at the ERTS Lab, building national competitions and the remote labs behind them. Most students learning robotics never run code on a real robot. For the Krishi CoBot theme I developed, a UR5 and a mobile robot work in a mock greenhouse; teams build in simulation, then book time on the real setup over the internet. 649 teams, 2436 participants, 475 hours of remote hardware access. We're writing a paper on making such labs scalable and low-cost.
 That's the breadth. Now one thread through the rest of the work: perception first.
 Only if time: I also mentor eYSIP interns, ran faculty development programmes on embedded systems for about 80 professors, and a ROS workshop for the Women in Robotics initiative.
 -->
@@ -247,7 +238,7 @@ title: LiDAR SLAM on a UAV
 <!--
 (0:50) Why: we wanted reliable 3D mapping on a payload-limited drone, where cameras struggle with lighting and texture. The question was which LiDAR-inertial pipeline survives real flight on a small onboard computer.
 The continuation of the SLAM-on-UAV work, this time with LiDAR. I mentored one intern on this: he built it, I guided it. Compared KISS-ICP, LIO-SAM and FAST-LIO in PX4 simulation, then a custom back end on FAST-LIO odometry with keyframes, Scan Context loop detection checked with GICP, and pose-graph optimisation. With the issues below fixed, LIO-SAM produced 3D maps from manual flights. Autonomous navigation is ongoing.
-The part I want to highlight: the maps drifted, and the cause was not the algorithm. It was a LiDAR–IMU extrinsic calibration error, made worse by thermal throttling on the Orin Nano. The estimator had no way to know its own model was wrong. I'll come back to that.
+The part I want to highlight: the maps drifted, and the cause was not the algorithm. It was a LiDAR–IMU extrinsic calibration error, made worse by thermal throttling on the Orin Nano. The estimator had no way to know its own model was wrong.
 TODO (Tahsin): refine the motivation.
 -->
 
@@ -343,12 +334,14 @@ layout: vs
 kicker: Why this project
 title: Can two robots carry a payload using only <em>local sensing</em>?
 label: vs
-left: { title: "Typical setups in the literature", items: ["Motion capture for robot and payload pose", "Force/torque sensors at the grasp", "Large, expensive robot platforms", "A shared map or central computer"] }
-right: { title: "This project", items: ["Wrist cameras only", "No force/torque sensing", "Low-cost robots, built in-house", "Each robot computes onboard"] }
+left: { title: "Typical setups in the literature", items: ["Motion capture for robot and payload pose", "Force/torque sensors at the grasp", "Large or omnidirectional platforms", "A shared map or global frame"] }
+right: { title: "This project", items: ["Wrist cameras only", "No force/torque sensing", "Small differential-drive robots, built in-house", "No shared map: the grasp links the robots"] }
 ---
 
 <!--
-(0:35) Why: most cooperative transport demonstrations rely on motion capture, force/torque sensing at the grasp and large, expensive platforms. The question is whether cooperation survives with only onboard sensing, the cameras on the robots' wrists, on low-cost robots, each computing for itself.
+(0:35) Why: most cooperative transport demonstrations rely on motion capture, force/torque sensing at the grasp, and large or omnidirectional platforms. The question is whether cooperation survives with only onboard sensing, the cameras on the robots' wrists, on small differential-drive robots that cannot move sideways.
+Context if asked: nonholonomic multi-robot transport work at IIT Bombay (Patra, Sinha, Guha) used motion capture and reported failure at about 6 cm of accumulated odometric error; our arena matches theirs for a direct comparison. The closest recent vision-based approach (leader–follower with control barrier functions, 2026) needs force/torque sensing on every robot.
+Be accurate about computation: perception and the estimator run on each robot's Orin; the QP currently runs on one computer with the partner streaming its joint angles. The formulation decentralises by consensus on the payload twist; a distributed solve is future work.
 -->
 
 ---
@@ -429,7 +422,8 @@ title: Estimation and control
 
 **Controller** · one QP, both bases and arms
 
-- The robots are coupled only through their relative orientation
+- Coupled only through relative orientation, which the chain gives without drift
+- Differential-drive bases: the arms absorb what the wheels cannot
 - Soft coupling: always feasible, looser when the estimate is uncertain
 
 </div>
@@ -451,37 +445,23 @@ $$
 
 <!--
 (1:00) Estimator: the wrist camera sees a marker board, PnP measures W, and an SE(3) Kalman filter averages it, with a chi-squared gate to drop bad detections and a covariance floor so a fixed camera-mount bias can't make it overconfident.
-Controller: one QP over both bases and both arms. Move the payload as planned, keep the two robots' predictions of the payload motion consistent, stay near a preferred posture. The coupling needs only the relative orientation, which is exactly what the grasp chain gives without drift. It's a soft cost, so the QP is always feasible, and its weight drops as the orientation uncertainty grows: rho = rho_0 / (1 + kappa tr Sigma_phi), with kappa set so the weight halves at 5 degrees.
+Controller: one QP over both bases and both arms. Why relative orientation is the quantity that matters: a 5° heading disagreement at 0.2 m/s gives 17.5 mm/s of conflicting motion, past the grasp's estimated 10–20 mm tolerance in under a second (analysis); errors in where the pair is in the room only misplace the payload, gracefully. The bases are differential drive and cannot move sideways, so the arms absorb what the wheels can't, the planner slows when the arms near their joint limits, and with headings fixed at grasp only a side-by-side layout is drivable. Move the payload as planned, keep the two robots' predictions of the payload motion consistent, stay near a preferred posture. The coupling needs only the relative orientation, which is exactly what the grasp chain gives without drift. It's a soft cost, so the QP is always feasible, and its weight drops as the orientation uncertainty grows: rho = rho_0 / (1 + kappa tr Sigma_phi), with kappa set so the weight halves at 5 degrees.
 If he wants depth: each piece was derived and checked numerically, e.g. the closed-chain relation against constructed geometry, and why the covariance floor must come after the update (backup slides).
 OSQP solve time if asked: median 380 µs measured on a workstation, not yet on the Orin.
-Notice the estimator runs at a fixed 50 Hz from 30 Hz detections, and the gate decides which detections to trust. That is a very crude answer to a question I care about, which I'll come back to.
--->
-
----
-layout: steps
-bg: dots
-kicker: Cooperative transport
-title: Current work and next steps
-steps:
-  - { icon: "lucide:target", title: "Validation", desc: "Against motion-capture ground truth, used only for evaluation" }
-  - { icon: "lucide:scan", title: "Payload pickup", desc: "Locating and grasping the payload with ICP" }
-  - { icon: "lucide:boxes", title: "A testbed", desc: "Low-cost platform for other cooperative tasks, including learning-based methods" }
----
-
-<!--
-(0:30) The full system runs on the two robots and the transport works; quantitative validation against motion capture is in progress, with mocap used only as ground truth for evaluation, never in the loop. In parallel: autonomous payload pickup, using ICP to locate it. And the platform itself is a cheap testbed for other cooperative tasks, including learning-based methods.
+Notice the estimator runs at a fixed 50 Hz from 30 Hz detections, and the gate decides which detections to trust. That is a very crude way of deciding what to trust.
+Status, one breath at the end (0:10): the full system runs on the two robots and the transport works; quantitative validation is next, chain against odometry on turns, with motion capture only as ground truth. The aim from the start was a working base for mobile manipulation, then cooperative tasks with learning on top, which is where the rest of this talk goes.
 -->
 
 ---
 layout: statement
 bg: grain
 kicker: Research direction
-title: Reliable robots from <em>known structure</em> plus learning for the rest.
+title: Known structure, learning for the rest, and knowing <em>when</em> to trust each.
 ---
 
 <!--
-(0:20) One line through everything I've shown: I want to make robots reliable in the real world by combining structure we understand (geometry, physics, estimation) with learning for what we can't model. The transport project is the structure side; the imitation learning projects are the learning side. I'd like to work where they meet.
-Be precise if he picks up on "hybrid": I haven't built a hybrid system yet. The transport platform is where I'd start, for example a learned residual on top of the QP.
+(0:20) One line through everything I've shown. I want robots that are reliable in the real world by combining structure we understand (geometry, physics, estimation) with learning for what we can't model. The part I keep running into is "when": when the model is enough, and when to trust the learned part.
+Be precise if he picks up on "hybrid": I haven't built a hybrid system yet. The transport platform is where I'd start.
 -->
 
 ---
@@ -490,105 +470,112 @@ kicker: Research direction
 title: Where the field is, as I understand it
 ---
 
-<div class="grid grid-cols-2 gap-10 mt-2">
+<div class="grid grid-cols-3 gap-6 mt-1 text-[0.82em]">
 <div>
 
-**Learning-first**
+**Learning where models are hard**
 
-- RL for legged locomotion
-- Vision-language-action models for manipulation
-- Strong results, but data-hungry and hard to debug
+- Legged robots: an RL policy over PD joint control <span class="cite">Hwangbo et al., Sci. Robot. 2019</span>
+- Drone racing: RL beat human champions <span class="cite">Swift, Nature 2023</span>
+- Manipulation: VLAs, brittle under small shifts <span class="cite">LIBERO-Plus, 2025</span>
 
 </div>
 <div>
 
-**Model-based + learning**
+**A model, plus learning for what it misses**
 
-- Optimiser plans, RL policy tracks <span class="cite">DTC, Sci. Robot. 2024</span>
-- MPC as a layer of an RL policy <span class="cite">Actor-Critic MPC, T-RO 2025</span>
-- Learned priors, classical SLAM back end <span class="cite">MASt3R-SLAM, CVPR 2025</span>
+- Drones: learned wind effects on nominal dynamics <span class="cite">Neural-Fly, Sci. Robot. 2022</span>
+- Swarms: learned downwash between drones <span class="cite">Neural-Swarm2, T-RO 2022</span>
+- Race cars: learned dynamics error inside MPC <span class="cite">Kabzan et al., RA-L 2019</span>
+- IMU odometry: a learned motion prior in a filter <span class="cite">TLIO, RA-L 2020</span>
+
+</div>
+<div>
+
+**Structure to check and to schedule**
+
+- Driving: end-to-end, with a separate validation layer <span class="cite">Waymo Foundation Model, 2025</span>
+- A slow reasoner directing a fast policy <span class="cite">Gemini Robotics 1.5, 2025</span>
+- Events filling the gaps between frames <span class="cite">Gehrig and Scaramuzza, Nature 2024</span>
 
 </div>
 </div>
 
-<div v-click class="mt-8">
-<Callout icon="lucide:search">Most hybrid results I've read are single-robot, on well-calibrated sensors at fixed rates.</Callout>
+<div v-click class="mt-5">
+<Callout icon="lucide:search">Across platforms, learning pays most where the model misses: wind, slip, contact. How far to trust the learned part is still usually fixed at design time.</Callout>
 </div>
 
 <!--
-(0:35) A rough picture from my reading, not a survey. Learning-first: RL for legged locomotion, vision-language-action models for manipulation; impressive, but data-hungry, and as I saw in the imitation work, hard to debug. Many strong results combine the two: in DTC a trajectory optimiser plans footholds and an RL policy tracks them; in Actor-Critic MPC a differentiable MPC is the last layer of the policy for agile flight; MASt3R-SLAM uses a learned 3D prior with a classical back end.
-(click) What I notice, carefully worded: most of these are one robot, with sensors assumed calibrated and running at fixed rates. That's where my three questions come from.
-Sources if asked: Jenelten et al., Science Robotics 2024; Romero et al., ICRA 2024 and T-RO 2025 (UZH RPG); Murai et al., CVPR 2025. More in the backup slide.
+(0:45) A rough picture from my reading, not a survey, and across platforms, not just arms.
+First column: where models are hard, learning took over. Legged robots run an RL policy on top of simple PD joint control; Swift beat human drone-racing champions with RL. But even these lean on models: ANYmal learned an actuator model from real data to fix the simulator, and Swift added residual models of dynamics and perception from real data. And VLAs in manipulation are brittle under small shifts, as LIBERO-Plus shows.
+Second column, the pattern I find most convincing: keep the physics model as the prior and learn only what it misses. Neural-Fly learns wind effects on top of nominal drone dynamics and adapts online; Neural-Swarm2 learns the downwash between drones flying close together; learning-based MPC for racing learns the vehicle model's error, things like tyre slip; TLIO puts a learned motion prior inside an EKF.
+Third column: big deployed systems keep structure to check and to schedule. Waymo is trained end-to-end but keeps a validation layer; Gemini Robotics 1.5 has a slow reasoning model planning and calling a fast VLA; and in your Nature paper, events fill the gaps between low-rate frames. (Name it, don't explain it to him.)
+(click) The common thread: classical models carry the prior, learning fills what they miss, wind, slip, contact. What's usually still fixed by design is how far the learned part is trusted. That's what my own projects kept showing me.
+If asked about Gemini Robotics 1.5: two models. Gemini Robotics-ER 1.5 is a vision-language model that reasons about the scene and breaks a task into steps; it calls Gemini Robotics 1.5, the VLA, with short language instructions, and the VLA turns each into motor commands. The ER model has a thinking budget that trades latency against accuracy, set by the developer, not by the situation.
+If asked about Tesla: closest to pure end-to-end; don't discuss safety numbers, they are contested.
+If asked about learned inertial odometry beyond TLIO: there is newer work on making these priors robust to sampling rate and motion symmetries; you've read his EqNIO and Lie Events papers, mention only if he raises them.
+Sources: on the References backup slides.
 -->
 
 ---
 layout: default
 kicker: Research direction
-title: Questions my projects left me with
+title: What hardware taught me
 ---
 
-<div class="grid grid-cols-3 gap-5 mt-2 items-stretch">
+<div class="grid grid-cols-3 gap-6 mt-1 items-stretch">
 
-<div class="q">
-<div class="q-n">01</div>
-<div class="q-t">What should a robot sense and compute, and when?</div>
-<div class="q-k">My work</div>
-<div class="q-b">Transport filter at a fixed 30 / 50 Hz, whether the payload is still or moving; a χ² gate is its only choice of what to trust.</div>
-<div class="q-k">Field</div>
-<div class="q-b">Event cameras sense on change; a few VIO systems adapt their compute. Most estimators still run at fixed rates.</div>
+<div class="lesson">
+<div class="lesson-n">01 · Cooperative transport</div>
+<div class="lesson-t">The model held; the contact didn't.</div>
+<div class="q-k">On hardware</div>
+<div class="lesson-b">The QP assumes a rigid grasp. A locked gripper lifted a robot; the TPU gripper slips, and nothing detects it.</div>
+<div class="q-k">Takeaway</div>
+<div class="lesson-b">Keep the model for coordination; learn the contact effects it misses.</div>
 </div>
 
-<div class="q">
-<div class="q-n">02</div>
-<div class="q-t">How can an estimator notice bad calibration?</div>
-<div class="q-k">My work</div>
-<div class="q-b">Drone maps drifted from a LiDAR–IMU extrinsic error. A camera-mount bias left the transport filter <strong>76×</strong> overconfident (simulation).</div>
-<div class="q-k">Field</div>
-<div class="q-b">Online calibration exists, but extrinsics become unobservable under common motions, so errors can pass silently.</div>
+<div class="lesson">
+<div class="lesson-n">02 · Imitation learning</div>
+<div class="lesson-t">The policy didn't know what should happen.</div>
+<div class="q-k">On hardware</div>
+<div class="lesson-b">A slight camera shift stalled our VLA policies on the SO-101 and UR5.</div>
+<div class="q-k">Takeaway</div>
+<div class="lesson-b">Predicting the outcome gives the system something to check its actions against.</div>
 </div>
 
-<div class="q">
-<div class="q-n">03</div>
-<div class="q-t">How can known structure go into learned models?</div>
-<div class="q-k">My work</div>
-<div class="q-b">Transport coordinates from grasp geometry alone; the learned policies handled contact but failed in ways we couldn't trace.</div>
-<div class="q-k">Field</div>
-<div class="q-b">Learned cooperative transport is mostly end-to-end RL; model-based methods assume a known grasp. Few combine the two.</div>
+<div class="lesson">
+<div class="lesson-n">03 · IMU-only odometry</div>
+<div class="lesson-t">Physics alone couldn't see enough.</div>
+<div class="q-k">On hardware</div>
+<div class="lesson-b">x, y and heading from the IMU drifted over long runs, even with an EKF and preintegration.</div>
+<div class="q-k">Takeaway</div>
+<div class="lesson-b">Position isn't observable from an IMU alone; constraints or a learned prior must fill the gap.</div>
 </div>
 
+</div>
+
+<div v-click class="mt-6">
+<Callout icon="lucide:lightbulb">Models where they're good, learning where they miss, and knowing which is which.</Callout>
 </div>
 
 <!--
-(1:15) Three questions, each from a problem I actually hit, and what I found when I read about it. I don't have answers; they're what I'd like to study.
-Literature behind the "Field" lines, if asked:
-- Adaptive compute in VIO: Li and Mourikis, IROS 2012 (features adapted to available compute); resource-aware parameter adaptation (2021); learned visual-modality selection for deep VIO (2022, turns the camera branch off when IMU suffices). Event cameras: his own area.
-- Calibration observability: degenerate motions make online camera–IMU calibration unobservable (Yang et al., online self-calibration for VINS); for LiDAR–IMU, near pure translation makes the extrinsic unobservable (LIC-Fusion 2.0, Zuo et al. 2020). Normal drone flight is close to that.
-- Learned cooperative transport: decentralised RL for quadruped manipulators (decPLM, 2025), multi-humanoid transport (CooHOI, NeurIPS 2024), DeReCo (2026); model-based force-sensorless methods assume known grasps (Verginis et al., 2017).
-1. In the transport project the camera gives 30 Hz detections, the filter runs at a fixed 50 Hz, and the only decision about what to trust is a chi-squared gate. So: what is worth sensing and processing, and when, with limited onboard compute?
-2. On the drone the maps drifted because the LiDAR–IMU extrinsic was wrong, and the estimator had no way to know. In the transport filter, a fixed camera-mount bias makes it badly overconfident in simulation; the covariance floor is a patch, not a solution. So: how can an estimator notice its own calibration is wrong?
-3. The transport works because the physical structure does the coordination; the learned policies handled contact I'd never model, but failed in ways I couldn't diagnose. So: how can that structure be built into learned models, both policies and models of how the world evolves?
-If asked for a first step, keep it small and say "for example": compare fixed-rate against triggered updates in the transport estimator; check whether a consistency test on the drone data would have flagged the extrinsic error; or learn a residual on top of the transport controller. Don't promise more than that.
--->
+(1:10) Three things hardware taught me. One sentence of story and one of lesson each; don't read the cards.
+1. Transport, which you've just seen. The QP assumes a rigid grasp. Locking the payload built internal stress until a robot lifted; the TPU gripper fixed that but sometimes slips, and nothing detects it. The model was right about coordination; what it missed was contact, and the robot can't tell when its assumption has broken.
+2. On the interns' VLA setups, a slight camera shift or small scene change stalled the policy completely. Approaches that predict the plan or the outcome and let a planner execute it held up better. A pixels-to-actions policy has nothing to check itself against.
+3. At the ARMS Lab we estimated the car's x, y and heading from the IMU alone, with an EKF and preintegration, and it drifted. Say why: position isn't observable from an IMU alone, so errors grow without bound. The missing information has to come from constraints, like the car not moving sideways, or a learned motion prior.
+(click) The common thread: models where they're good, learning where they miss, and knowing which is which.
+Then the CLOSING in the Thank-you notes, and advance.
 
----
-layout: vs
-kicker: Research direction
-title: Where these meet your group's work
-label: →
-left: { title: "My questions", items: ["What to sense and compute, and when", "Estimators that notice calibration errors", "Known structure inside learned models"] }
-right: { title: "Directions in your group", items: ["Event-driven sensing: gather information when and where it is useful", "Inertial odometry with geometric structure (Lie Events, EqNIO)", "World models: how the world evolves, and when to act, with limited resources"] }
----
+IF HE ASKS WHAT YOU'D TRY (examples, not promises):
+- Transport: a learned residual on the QP for contact effects, its authority set by the estimator's covariance; slip detection from the grasp innovation.
+- VLA: predict where the object should go, let a classical planner track it, compare with the VLA under camera shifts.
+- IMU: a learned displacement prior fused in the EKF, with the no-sideways-motion constraint as structure.
 
-<!--
-(0:45) This is why your group interests me. The first question is close to event-driven sensing: gathering information when it is useful rather than at fixed rates. The second is close to learned inertial odometry with Lie-group and equivariant structure, and I'd be curious how that behaves under the kind of calibration error I saw on the drone. The third connects to world models that help a robot decide when to act with limited resources.
-To be honest about where I stand: I haven't worked with event cameras or learned inertial odometry myself yet; that's what I'd like to learn. I'm open on the platform, drones, mobile manipulators or multi-robot systems, and would like to shape the specific project with you.
-Then move to questions for him.
-
-QUESTIONS TO ASK HIM (pick two or three):
-- What would a first student in your group work on?
-- For the August 2027 PhD intake (NUS deadline 15 January), should I name you as proposed supervisor, and is there anything you'd like me to strengthen before then?
-- How do you see event-based sensing connecting to manipulation or multi-robot systems?
-- What hardware will the group have at the start?
+LITERATURE IF ASKED:
+- Learned inertial odometry: TLIO (RA-L 2020) and later work fused with an EKF. His EqNIO and Lie Events only if he raises them.
+- VLA robustness: LIBERO-Plus (2025). World-action models: the 2026 WAM tutorial.
+- Plan-then-track manipulation: name a specific paper only if its exact title and authors are checked.
+- Learned cooperative transport: decPLM (2025), CooHOI (NeurIPS 2024), DeReCo (2026); force-sensorless model-based methods assume known grasps (Verginis et al., 2017).
 -->
 
 ---
@@ -601,6 +588,21 @@ subtitle: Questions?
 <!--
 (0:10) Thank you. Leave this up during questions.
 
+CLOSING (said after the last click on "What hardware taught me", ~0:30, then advance):
+"That's really why I'm applying for a PhD. I've spent the last two years on the structured side, and what I want now is to go deep on the learning side: building learned systems that are efficient and know when to trust themselves. Your group's work on deciding when to sense and when to act is the closest I've seen to that, which is why I reached out. Thank you, I'd be glad to discuss any of it."
+
+IF HE ASKS WHAT YOU'D WORK ON:
+"I don't have a fixed topic yet; those three lessons are where my interest comes from, and I'd like to shape it with you."
+
+IF HE ASKS WHAT YOU KNOW ABOUT LEARNING:
+Be specific: ACT, SmolVLA, diffusion policy and others compared in LeHome; ACT vs SmolVLA on real SO-101 and UR5. Honest gap: training and deploying, not yet designing new methods.
+
+QUESTIONS TO ASK HIM (pick two or three):
+- What would a first student in your group work on?
+- For the August 2027 PhD intake (NUS deadline 15 January), should I name you as proposed supervisor, and is there anything you'd like me to strengthen before then?
+- How do you see event-based sensing connecting to manipulation or multi-robot systems?
+- What hardware will the group have at the start?
+
 PREPARED ANSWERS:
 - Is it an invariant EKF? No. A right-perturbation (body-frame) error-state Kalman filter on SE(3). The state is constant with H = I to first order, so invariance has no dynamics to help with. An older CV said right-invariant; the current CV says "SE(3) EKF", which is accurate.
 - EKF vs factor graph? Constant state, cheap running geodesic average at 50 Hz, gives a covariance every tick for the controller. A smoother would help if W changes slowly (slip) or if hand-eye extrinsics were estimated jointly.
@@ -612,6 +614,11 @@ PREPARED ANSWERS:
 - Status: runs on hardware with a side-by-side grasp. Quantitative validation against motion capture is in progress; the covariance floor is still a conservative 10 mm / 2° placeholder until that capture exists.
 - How would event cameras help? The 30 Hz wrist camera blurs and loses the board during fast arm motion; an event camera gives low-latency tracking exactly then.
 - What did you build vs interns? Cooperative transport, Niti Vahan, Krishi CoBot: mine (with advisors / the team). Visual SLAM 2025: I was the intern. LiDAR UAV and imitation learning 2026: interns built them, I defined and mentored.
+- Isn't end-to-end replacing the classical pipeline? It's replacing hand-written modules, not structure. Waymo trains end-to-end but keeps explicit objects and maps and a separate validation layer; manipulation stacks split a slow reasoner from a fast controller. Those splits, and when each part runs, are still fixed by design rather than decided by the robot.
+- Why not just estimate the mount bias? From one wrist camera with a constant state it isn't observable: it's absorbed into the grasp estimate. It needs an independent reference, e.g. the closed chain compared against landmarks, or the partner's view.
+- Have you used event cameras? No. The first place I'd try one is the wrist camera during fast arm motion, where the 30 Hz camera blurs and loses the board.
+- Tactile sensing? It's where I'd like to go for manipulation, especially for grasp slip like in the transport project. Event-based optical tactile sensors exist (Evetac, 2023), which connects it to event-driven sensing. Only if he asks.
+- Why not learn everything, as legged robots do? Legged locomotion shows RL over simple PD control works very well where contact is hard to model, but those policies are trained in simulators corrected with real data. I'd use learning where the model misses, and keep the model where it is good.
 -->
 
 ---
@@ -681,34 +688,83 @@ aside: backup
 <div class="grid grid-cols-2 gap-x-8 gap-y-5 mt-2">
 <div>
 
-**Legged locomotion**
+**Driving**
 
-DTC (Jenelten et al., *Science Robotics* 2024): trajectory optimisation plans footholds, an RL policy tracks them.
-
-</div>
-<div>
-
-**Agile flight**
-
-Actor-Critic MPC (Romero et al., ICRA 2024; *T-RO* 2025): a differentiable MPC as the actor's last layer.
+Waymo Foundation Model (2025): end-to-end trained, structured outputs, separate trajectory validation. Alpamayo-R1 (NVIDIA, 2025): reasoning VLA with a unicycle-model action decoder.
 
 </div>
 <div>
 
 **Manipulation**
 
-ResiP (Ankile et al., 2024): RL residual on a frozen diffusion BC policy. AEGIS (arXiv 2025): CBF safety layer on VLAs.
+Gemini Robotics 1.5 (2025): reasoning model orchestrates a VLA. ResiP (Ankile et al., 2024): RL residual on a frozen diffusion policy. AEGIS (2025): CBF safety layer on VLAs.
+
+</div>
+<div>
+
+**Legged and aerial**
+
+DTC (Jenelten et al., *Science Robotics* 2024): optimiser plans footholds, RL tracks. Actor-Critic MPC (Romero et al., *T-RO* 2025): differentiable MPC as the actor's last layer.
 
 </div>
 <div>
 
 **Estimation and multi-robot**
 
-MASt3R-SLAM (CVPR 2025): learned prior, classical optimisation. GCBF+ (*T-RO* 2025): learned graph CBF for multi-robot safety.
+MASt3R-SLAM (CVPR 2025): learned 3D prior, classical optimisation. GCBF+ (*T-RO* 2025): learned graph CBF for multi-robot safety.
 
 </div>
 </div>
 
 <!--
-Only if asked for examples. Actor-Critic MPC is from the UZH Robotics and Perception Group. EqNIO and Lie Events are his own; name them, don't explain them to him.
+Only if asked for examples. Actor-Critic MPC is from the UZH Robotics and Perception Group.
+-->
+
+---
+layout: default
+kicker: Backup
+title: References (1/2)
+aside: backup
+---
+
+<div class="refs">
+
+1. J. Hwangbo, J. Lee, A. Dosovitskiy et al. Learning agile and dynamic motor skills for legged robots. *Science Robotics* 4, 2019. [doi:10.1126/scirobotics.aau5872](https://doi.org/10.1126/scirobotics.aau5872)
+2. E. Kaufmann, L. Bauersfeld, A. Loquercio et al. Champion-level drone racing using deep reinforcement learning (Swift). *Nature* 620, 2023. [doi:10.1038/s41586-023-06419-4](https://doi.org/10.1038/s41586-023-06419-4)
+3. LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models. [arXiv:2510.13626](https://arxiv.org/abs/2510.13626), 2025.
+4. M. O'Connell, G. Shi, X. Shi et al. Neural-Fly enables rapid learning for agile flight in strong winds. *Science Robotics* 7, 2022. [doi:10.1126/scirobotics.abm6597](https://doi.org/10.1126/scirobotics.abm6597)
+5. G. Shi, W. Hönig, X. Shi et al. Neural-Swarm2: Planning and Control of Heterogeneous Multirotor Swarms Using Learned Interactions. *T-RO* 38, 2022. [doi:10.1109/TRO.2021.3098436](https://doi.org/10.1109/TRO.2021.3098436)
+6. J. Kabzan, L. Hewing, A. Liniger et al. Learning-Based Model Predictive Control for Autonomous Racing. *RA-L* 4, 2019. [doi:10.1109/LRA.2019.2926677](https://doi.org/10.1109/LRA.2019.2926677)
+7. W. Liu, D. Caruso, E. Ilg et al. TLIO: Tight Learned Inertial Odometry. *RA-L* 5, 2020. [doi:10.1109/LRA.2020.3007421](https://doi.org/10.1109/LRA.2020.3007421)
+8. Waymo. Demonstrably Safe AI for Autonomous Driving. [Waymo blog](https://waymo.com/blog/2025/12/demonstrably-safe-ai-for-autonomous-driving/), 9 December 2025.
+9. Gemini Robotics Team, Google DeepMind. Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer. [arXiv:2510.03342](https://arxiv.org/abs/2510.03342), 2025.
+10. D. Gehrig and D. Scaramuzza. Low-latency automotive vision with event cameras. *Nature* 629, 1034, 2024. [doi:10.1038/s41586-024-07409-w](https://doi.org/10.1038/s41586-024-07409-w)
+
+</div>
+
+<!--
+Sources named on "Where the field is". Leave up only if he asks for a source.
+-->
+
+---
+layout: default
+kicker: Backup
+title: References (2/2)
+aside: backup
+---
+
+<div class="refs">
+
+11. NVIDIA. Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail. [arXiv:2511.00088](https://arxiv.org/abs/2511.00088), 2025.
+12. L. Ankile et al. From Imitation to Refinement: Residual RL for Precise Assembly (ResiP). [arXiv:2407.16677](https://arxiv.org/abs/2407.16677), 2024.
+13. VLSA / AEGIS: vision-language-action models with a plug-and-play safety constraint layer. [arXiv:2512.11891](https://arxiv.org/abs/2512.11891), 2025.
+14. F. Jenelten, J. He, F. Farshidian, M. Hutter. DTC: Deep Tracking Control. *Science Robotics*, 2024. [arXiv:2309.15462](https://arxiv.org/abs/2309.15462)
+15. A. Romero, E. Aljalbout, Y. Song, D. Scaramuzza. Actor-Critic Model Predictive Control. ICRA 2024; *T-RO* 2025. [arXiv:2306.09852](https://arxiv.org/abs/2306.09852)
+16. R. Murai, E. Dexheimer, A. J. Davison. MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors. CVPR 2025. [arXiv:2412.12392](https://arxiv.org/abs/2412.12392)
+17. S. Zhang, O. So, K. Garg, C. Fan. GCBF+: A Neural Graph Control Barrier Function Framework for Distributed Safe Multi-Agent Control. *T-RO*, 2025. [arXiv:2401.14554](https://arxiv.org/abs/2401.14554)
+
+</div>
+
+<!--
+Sources named on the hybrid-methods backup slide.
 -->
