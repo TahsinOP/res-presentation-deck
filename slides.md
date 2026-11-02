@@ -492,7 +492,7 @@ title: Where the field is, as I understand it
 </div>
 <div>
 
-**Structure to check and to schedule**
+**Structure to check and schedule the learned part**
 
 - Driving: end-to-end, with a separate validation layer <span class="cite">Waymo Foundation Model, 2025</span>
 - A slow reasoner directing a fast policy <span class="cite">Gemini Robotics 1.5, 2025</span>
@@ -582,7 +582,6 @@ LITERATURE IF ASKED:
 layout: end
 bg: mesh
 title: Thank you
-subtitle: Questions?
 ---
 
 <!--
