@@ -105,18 +105,18 @@ title: Publications
 <div class="pub-tag">Published · <em>Industrial Robot</em>, 2026</div>
 <div class="pub-title">Soft autonomous mobile manipulators in agricultural automation: a review</div>
 <div class="pub-desc">How soft grippers, arms and mobile bases come together for handling crops, and why integrating them is still the open problem.</div>
-<Pic src="img/samm-field-robots.jpg" height="9.2rem" fit="contain" />
+<Pic src="img/samm-field-robots.jpg" height="12.4rem" fit="contain" />
 </div>
 
 <div class="pub">
 <div class="pub-tag">In preparation · eYRC 2025–26</div>
 <div class="pub-title">Remote labs for robotics at national scale</div>
 <div class="pub-desc">Krishi CoBot: teams develop in simulation, then run a UR5 and a mobile robot over the internet.</div>
-<div class="grid grid-cols-[1.4fr_1fr] gap-3">
-<Pic src="img/remote-labs.png" height="5.2rem" fit="contain" />
-<Vid src="videos/krishi.mp4" height="5.2rem" fill />
+<div class="grid grid-cols-2 gap-3">
+<Pic src="img/remote-labs.png" height="10.7rem" fit="contain" />
+<Vid src="videos/krishi.mp4" height="10.7rem" fill />
 </div>
-<div class="grid grid-cols-3 gap-3 mt-3">
+<div class="grid grid-cols-3 gap-2 mt-auto">
   <StatCard value="649" label="teams" size="sm" />
   <StatCard value="2436" label="participants" size="sm" />
   <StatCard value="475" unit="h" label="on real robots" size="sm" />
@@ -397,7 +397,7 @@ $$
 
 ::right::
 
-<Vid src="videos/ClosedChain.mp4" caption="Animation from the project documentation" height="20rem" />
+<Vid src="videos/ClosedChain.mp4" caption="Odometry drifts; the chain does not" height="20rem" />
 
 <!--
 (1:00) Once both robots hold the payload, they form a closed kinematic chain: base, arm, grasp, payload, grasp, arm, base. F comes from the joint encoders every tick; W, gripper to payload, is constant while the grasp is rigid, so the wrist camera only has to measure it. So each robot gets its partner's pose with no odometry, no shared map, no motion capture, and nothing integrated over time, so no drift. Planning and control are in the payload frame; arena landmarks only locate the pair in the room.
@@ -438,7 +438,7 @@ $$
 
 <div class="text-center text-sm opacity-70 -mt-2 mb-3">subject to joint and velocity limits · OSQP, 50 Hz</div>
 
-<Vid src="videos/RodToSpring.mp4" caption="Hard constraint vs soft cost, from the project documentation" height="11rem" fill />
+<Vid src="videos/RodToSpring.mp4" caption="Hard weld vs soft weld" height="15rem" fill />
 
 </div>
 </div>

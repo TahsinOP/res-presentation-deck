@@ -24,8 +24,9 @@
 .pub-tag em { font-style: normal; }
 .pub-title { font-family: var(--font-display); font-weight: var(--w-display); font-size: 1.12rem; line-height: 1.25; }
 .pub-desc { font-size: 0.8rem; line-height: 1.45; color: var(--fg-dim); margin-bottom: 0.2rem; }
-.pub .stat { padding: 0.5rem 0.7rem; }
-.pub .stat-label { font-size: 0.74rem; margin-top: 0.1rem; }
+.pub .stat { padding: 0.2rem 0.5rem; }
+.pub .stat .stat-num { font-size: 1.1rem; line-height: 1.1; }
+.pub .stat-label { font-size: 0.62rem; margin-top: 0; }
 
 /* question → direction rows (Where these meet your group's work) */
 .map { display: flex; flex-direction: column; gap: 0.8rem; }
@@ -49,3 +50,6 @@
 .lesson-t { font-family: var(--font-display); font-weight: var(--w-display); font-size: 1.15rem; line-height: 1.25; }
 .lesson-b { font-size: 0.82rem; line-height: 1.4; color: var(--fg-dim); }
 .lesson .lesson-b:last-child { color: var(--fg); }
+
+/* closing slide: just the title, no accent bar */
+.slidev-layout.l-end .accent-bar { display: none; }
