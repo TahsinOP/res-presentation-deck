@@ -27,7 +27,7 @@ clicks: 4
 <AboutTimeline />
 
 <!--
-(0:25, one click per step) Mechanical engineering at NIT Karnataka with a minor in electronics. My first step into robotics was the Robocon team, building mechanisms for DD Robocon 2023. In my final year I wrote a review on soft autonomous mobile manipulators with Prof. Mervin Joe Thomas, published in Industrial Robot this year. Since August 2025 I've been at the ERTS Lab: competition themes, remote labs, mentoring interns, and since February a research project in cooperative transport.
+(0:25, one click per step) Mechanical engineering at NIT Karnataka with a minor in electronics. My first step into robotics was the Robocon team, building mechanisms for DD Robocon 2023. In my final year I wrote a review on soft autonomous mobile manipulators under the guidance of Prof. Mervin Joe Thomas, published in Industrial Robot this year. Since August 2025 I've been at the ERTS Lab: competition themes, remote labs, mentoring interns, and since February a research project in cooperative transport.
 -->
 
 ---
@@ -89,7 +89,7 @@ title: Earlier projects
 </div>
 
 <!--
-(0:35) Earlier projects, in order. My first step into robotics was DD Robocon 2023 with the NITK team: in the mechanical subsystem I designed the chassis and mechanisms for two robots, and we built catapult and dual-roller shooters to throw rings onto poles up to 12 m away; NITK's first national qualification, top 50 in the country. At the ARMS Lab at IIT Bombay with Prof. Arpita Sinha, I made a stock RC car autonomous on ROS 2: state estimation with an IMU and Vicon Kalman filter, 2D LiDAR SLAM, then AMCL and Nav2 with pure pursuit. At NITK I guided the software side of an autonomous campus shuttle on an electric chassis: chose the sensors, set up Autoware on ROS 2, and LIO-SAM to map the campus; the hardware and the runs you see were done by the CSD team: the first autonomous steering test, a point-to-point run, and a run with a pedestrian walking into the path. And a simulated Unitree B2 quadruped in MuJoCo bridged to ROS 2: leg IK, a trot gait and waypoint navigation.
+(0:35) Earlier projects, in order. My first step into robotics was DD Robocon 2023 with the NITK team: in the mechanical subsystem I designed the chassis and mechanisms for two robots, and we built catapult and dual-roller shooters to throw rings onto poles up to 12 m away; NITK's first national qualification, top 50 in the country. At the ARMS Lab at IIT Bombay, under Prof. Arpita Sinha, I made a stock RC car autonomous on ROS 2: state estimation with an IMU and Vicon Kalman filter, 2D LiDAR SLAM, then AMCL and Nav2 with pure pursuit. At NITK I guided the software side of an autonomous campus shuttle on an electric chassis: chose the sensors, set up Autoware on ROS 2, and LIO-SAM to map the campus; the hardware and the runs you see were done by the CSD team: the first autonomous steering test, a point-to-point run, and a run with a pedestrian walking into the path. And a simulated Unitree B2 quadruped in MuJoCo bridged to ROS 2: leg IK, a trot gait and waypoint navigation.
 Then two papers.
 -->
 
@@ -126,7 +126,7 @@ title: Publications
 </div>
 
 <!--
-(0:45) Two papers. The review, published in Industrial Robot this year with Prof. Mervin Joe Thomas at NITK, covers soft autonomous mobile manipulators for agriculture: soft grippers, mobile bases in unstructured fields and the integrated system. The finding: each part has matured, but integrating them is the open problem.
+(0:45) Two papers. The review, published in Industrial Robot this year under the guidance of Prof. Mervin Joe Thomas at NITK, covers soft autonomous mobile manipulators for agriculture: soft grippers, mobile bases in unstructured fields and the integrated system. The finding: each part has matured, but integrating them is the open problem.
 The second, in preparation, comes from my main role at the ERTS Lab, building national competitions and the remote labs behind them. Most students learning robotics never run code on a real robot. For the Krishi CoBot theme I developed, a UR5 and a mobile robot work in a mock greenhouse; teams build in simulation, then book time on the real setup over the internet. 649 teams, 2436 participants, 475 hours of remote hardware access. We're writing a paper on making such labs scalable and low-cost.
 That's the breadth. Now one thread through the rest of the work: perception first.
 Only if time: I also mentor eYSIP interns, ran faculty development programmes on embedded systems for about 80 professors, and a ROS workshop for the Women in Robotics initiative.
@@ -177,7 +177,7 @@ title: Niti Vahan
 
 ---
 layout: default
-kicker: eYSIP 2025 · research intern, my project
+kicker: eYSIP 2025 · Research internship · Individual project
 title: Visual SLAM from scratch
 ---
 
@@ -256,7 +256,7 @@ SKIPPABLE. (0:05) The other side: learning, where the policy replaces the model.
 
 ---
 layout: default
-kicker: IEEE ICRA 2026 · my team (lemax), with Prof. Nived Chebrolu
+kicker: "IEEE ICRA 2026 · Team lemax · Guide: Prof. Nived Chebrolu"
 title: LeHome Challenge
 ---
 
@@ -282,7 +282,7 @@ title: LeHome Challenge
 </div>
 
 <!--
-(0:40) This one I worked on myself, with Prof. Chebrolu. The LeHome Challenge at ICRA 2026 was a simulation competition on deformable manipulation: folding garments with two SO-101 arms in Isaac Sim, four garment categories spawned at random. The video is our SmolVLA policy on one garment of each category, sped up four times. We compared four specialist SmolVLA policies, one per category, routed by a YOLO classifier, against a single generalist; both ended up about the same, 55% locally and 49% on the final server, rank 32 of 62. We also tried ACT, X-VLA, diffusion policy and π0.
+(0:40) This one I worked on myself, guided by Prof. Chebrolu. The LeHome Challenge at ICRA 2026 was a simulation competition on deformable manipulation: folding garments with two SO-101 arms in Isaac Sim, four garment categories spawned at random. The video is our SmolVLA policy on one garment of each category, sped up four times. We compared four specialist SmolVLA policies, one per category, routed by a YOLO classifier, against a single generalist; both ended up about the same, 55% locally and 49% on the final server, rank 32 of 62. We also tried ACT, X-VLA, diffusion policy and π0.
 -->
 
 ---
@@ -322,7 +322,7 @@ index: "03"
 bg: aurora
 kicker: Research project · Feb 2026 – present
 title: Cooperative transport
-subtitle: With Prof. Shivaram Kalyanakrishnan, Prof. Harshad Khadilkar and Prof. Nived Chebrolu, IIT Bombay
+subtitle: Guided by Prof. Shivaram Kalyanakrishnan, Prof. Harshad Khadilkar and Prof. Nived Chebrolu, IIT Bombay
 ---
 
 <!--
